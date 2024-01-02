@@ -1,0 +1,16 @@
+{
+  "DEFAULT_ERRORS": {
+    "AUTHENTICATION_FAILED": "You are not authorized to access this account.",
+    "INTERNAL_SERVER_ERROR": "Internal server error. Please try again later.",
+    "RESOURCE_NOT_FOUND": "Requested resource not found.",
+    "VALIDATION_FAILED": "Validation failed. Please modify the request and try again."
+  },
+  "MESSAGES": {
+    "CHECK_ALIVE": "जीवित"
+  },
+  "VALIDATION_ERRORS": {
+    "EXPIRED_CODE": "The code has expired. Please get a new token and try again.",
+    "INCORRECT_CODE": "The code entered is not correct. Please check the code and try again.",
+    "INVALID_PHONE": "Please specify a valid phone number with country code."
+  }
+}

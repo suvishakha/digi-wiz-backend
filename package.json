@@ -1,0 +1,56 @@
+{
+  "name": "dj",
+  "version": "1.0.0",
+  "description": "dj",
+  "main": "./dist/server/server",
+  "scripts": {
+    "build": "gulp build",
+    "serve": "gulp serve",
+    "start:dist": "node ./dist/server/server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@sendgrid/mail": "^8.1.0",
+    "@types/body-parser": "^1.17.1",
+    "@types/config": "0.0.36",
+    "@types/i18n": "^0.8.6",
+    "@types/mongoose": "^5.10.3",
+    "@types/node": "^16.7.1",
+    "body-parser": "^1.19.0",
+    "config": "^3.2.5",
+    "express": "^4.17.1",
+    "express-validator": "^6.4.0",
+    "express-winston": "^4.0.2",
+    "gulp": "^4.0.0",
+    "gulp-nodemon": "^2.5.0",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "i18n": "^0.8.5",
+    "lodash": "^4.17.21",
+    "logdna-winston": "^3.0.5",
+    "module-alias": "^2.2.2",
+    "mongoose": "^5.10.19",
+    "nodemon": "^2.0.12",
+    "ts-node": "^10.2.1",
+    "typescript": "^5.3.3",
+    "winston": "^3.11.0"
+  },
+  "_moduleAliases": {
+    "@controllers": "dist/controllers",
+    "@helpers": "dist/helpers",
+    "@models": "dist/models",
+    "@middleware": "dist/middleware",
+    "@server": "dist/server",
+    "@services": "dist/services",
+    "@storage": "dist/storage",
+    "@typings": "dist/typings",
+    "@validators": "dist/validators",
+    "@workers": "dist/workers"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/lodash": "^4.14.202",
+    "@types/winston": "^2.4.4"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "jwt": {
+    "key": "boilerplate"
+  },
+  "auth": {
+    "jwtSecret": "boilerplate"
+  },
+  "www": {
+    "port": 4200
+  }
+}
