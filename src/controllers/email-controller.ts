@@ -1,7 +1,7 @@
-import {SendEmailParams} from "@models";
-import {AppContext} from "@typings";
-import {NextFunction, Request, Response, Router} from "express";
-import {BaseController} from "./base-controller";
+import { SendEmailParams } from "@models";
+import { AppContext } from "@typings";
+import { NextFunction, Request, Response, Router } from "express";
+import { BaseController } from "./base-controller";
 
 export class EmailController extends BaseController
 {
@@ -21,7 +21,7 @@ export class EmailController extends BaseController
 
 	private sendEmail = async (req: Request, res: Response, next: NextFunction) =>
 	{
-		const {sender, recipient, subject, body} = req.body;
+		const { sender, recipient, subject, body } = req.body;
 
 		const sendEmailParams: SendEmailParams = new SendEmailParams
 			({
@@ -31,11 +31,11 @@ export class EmailController extends BaseController
 		try
 		{
 			await this.appContext.sendEmailService.sendEmail(sendEmailParams);
-			res.send({message: "Mail sent successfully!"});
+			res.send({ message: "Mail sent successfully!" });
 		}
 		catch (e)
 		{
 			next(e);
 		}
-	}
+	};
 }

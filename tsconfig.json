@@ -9,20 +9,18 @@
 		"inlineSourceMap": true,
 		"outDir": "dist",
 		"baseUrl": ".",
-		
+
 		"paths":
 		{
-			"@controllers": ["src/controllers/index"],
-			"@helpers": ["src/helpers/index"],
-			"@middleware": ["src/middleware/index"],
-			"@models": ["src/models/index"],
-			"@server": ["src/server/index"],
-			"@services": ["src/services/index"],
-			"@storage": ["src/storage/index"],
-			"@typings": ["src/typings/index"],
-			"@validators": ["src/validators/index"],
-			"@workers": ["src/workers/index"]
+			"@controllers": [ "src/controllers/index" ],
+			"@database": [ "src/database/index" ],
+			"@helpers": [ "src/helpers/index" ],
+			"@middleware": [ "src/middleware/index" ],
+			"@models": [ "src/models/index" ],
+			"@server": [ "src/server/index" ],
+			"@services": [ "src/services/index" ],
+			"@typings": [ "src/typings/index" ]
 		}
 	},
-	"include": ["./src/**/*.ts"]
+	"include": [ "./src/**/*.ts" ]
 }

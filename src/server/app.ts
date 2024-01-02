@@ -8,7 +8,7 @@ import path from "path";
 import { Server } from "http";
 import winston from "winston";
 
-import { AliveController, BaseController, EmailController } from "@controllers";
+import { AliveController, BaseController, EmailController, UserController } from "@controllers";
 import { ErrorHandler } from "@middleware";
 
 export class App
@@ -73,7 +73,8 @@ export class App
 		const controllers: BaseController[] =
 			[
 				new AliveController(this.context),
-				new EmailController(this.context)
+				new EmailController(this.context),
+				new UserController(this.context)
 			];
 
 		for (const ctrl of controllers)

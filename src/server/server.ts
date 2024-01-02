@@ -1,13 +1,13 @@
 require("module-alias/register");
 
-import {AppContext} from "@typings";
-import {App} from "./app";
+import { AppContext } from "@typings";
+import { App } from "./app";
 
 import
 {
 	environment,
 	logger,
-	mongoStore,
+	pool,
 	sendEmailService
 } from "./dependencies";
 
@@ -22,10 +22,9 @@ const appContext: AppContext =
 {
 	try
 	{
-		logger.info("[WWW] Initializing connection to Mongo Store");
-		await mongoStore.connect();
-		logger.info("[WWW] Server Running");
+		logger.info("[WWW] Initializing connection to MySql");
 		new App(appContext).listen();
+		logger.info("[WWW] Server Running");
 	}
 	catch (e)
 	{

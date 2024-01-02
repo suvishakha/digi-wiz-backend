@@ -1,11 +1,17 @@
 {
-  "auth": {
-    "jwtSecret": "boilerplate"
-  },
-  "mongoDb": {
-    "uri": "mongodb+srv://db-admin-of-cksc:iPiExZba43Cqaq6f@cksc.lh5ni5d.mongodb.net/CKSC-DB"
-  },
-  "www": {
-    "port": 4401
-  }
+	"auth":
+	{
+		"jwtSecret": "boilerplate"
+	},
+	"db":
+	{
+		"username": "digi_admin",
+		"password": "mainUser@384",
+		"port": "3336",
+		"name": "digi_wiz_db"
+	},
+	"www":
+	{
+		"port": 4401
+	}
 }

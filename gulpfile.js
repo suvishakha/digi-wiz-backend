@@ -8,7 +8,7 @@ const SRC_DIR = "src";
 const DEST_DIR = "dist";
 const CONFIG_DIR = "config";
 
-const BUILD_TASKS = [ "compile", "copy_locales" ];
+const BUILD_TASKS = ["compile", "copy_locales"];
 
 gulp.task("compile", () =>
 {
@@ -18,7 +18,7 @@ gulp.task("compile", () =>
 gulp.task("copy_locales", () =>
 {
 	return gulp
-		.src([ `${SRC_DIR}/locales/*.json` ])
+		.src([`${SRC_DIR}/locales/*.json`])
 		.pipe(gulp.dest(`${DEST_DIR}/locales/`));
 });
 
@@ -30,7 +30,7 @@ gulp.task(
 	{
 		nodemon({
 			exec: `node ./${DEST_DIR}/server/server`,
-			watch: [ `${SRC_DIR}/**/*.*`, CONFIG_DIR ],
+			watch: [`${SRC_DIR}/**/*.*`, CONFIG_DIR],
 			tasks: BUILD_TASKS,
 		});
 	})

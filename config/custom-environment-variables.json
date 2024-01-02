@@ -3,12 +3,15 @@
 	{
 		"jwtSecret": "JWT_SECRET"
 	},
-	"mongoDb":
-	{
-		"uri": "MONGODB_URI"
-	},
 	"www":
 	{
 		"port": "PORT"
+	},
+	"db":
+	{
+		"username": "DB_USER",
+		"password": "DB_PASS",
+		"port": "DB_PORT",
+		"name": "DB_NAME"
 	}
 }
