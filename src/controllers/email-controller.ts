@@ -2,6 +2,7 @@ import { SendEmailParams } from "@models";
 import { AppContext } from "@typings";
 import { NextFunction, Request, Response, Router } from "express";
 import { BaseController } from "./base-controller";
+import { jwtMiddleware } from "@middleware";
 
 export class EmailController extends BaseController
 {
@@ -16,7 +17,7 @@ export class EmailController extends BaseController
 
 	private initializeRoutes()
 	{
-		this.router.post(`${this.basePath}/sendEmail`, this.sendEmail);
+		this.router.post(`${this.basePath}/sendEmail`, jwtMiddleware, this.sendEmail);
 	}
 
 	private sendEmail = async (req: Request, res: Response, next: NextFunction) =>

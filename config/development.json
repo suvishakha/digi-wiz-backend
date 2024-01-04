@@ -1,7 +1,7 @@
 {
 	"auth":
 	{
-		"jwtSecret": "boilerplate"
+		"jwtSecret": "32ff282ae6d3242bd7c324ad8e084ac0207b8184918abc7a0ab6921354f1df88"
 	},
 	"db":
 	{

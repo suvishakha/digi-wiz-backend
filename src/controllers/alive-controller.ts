@@ -1,7 +1,8 @@
-import {NextFunction, Request, Response, Router} from 'express';
+import { NextFunction, Request, Response, Router } from 'express';
 
-import {AppContext} from "@typings";
-import {BaseController} from "./base-controller";
+import { AppContext } from "@typings";
+import { BaseController } from "./base-controller";
+import { jwtMiddleware } from "@middleware";
 
 export class AliveController extends BaseController
 {
@@ -16,7 +17,7 @@ export class AliveController extends BaseController
 
 	private initializeRoutes()
 	{
-		this.router.get(this.basePath, this.checkAliveStatus);
+		this.router.get(this.basePath, jwtMiddleware, this.checkAliveStatus);
 	}
 
 	private checkAliveStatus =
@@ -36,5 +37,5 @@ export class AliveController extends BaseController
 				{
 					message: res.__("MESSAGES.CHECK_ALIVE")
 				});
-		}
+		};
 }

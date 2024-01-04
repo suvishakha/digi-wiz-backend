@@ -79,6 +79,11 @@ export class App
 
 		for (const ctrl of controllers)
 		{
+			if (ctrl instanceof UserController)
+			{
+				this.expressApp.use("/", ctrl.publicRouter);
+			}
+
 			this.expressApp.use("/", ctrl.router);
 		}
 	}
