@@ -73,5 +73,4 @@ export class UserController extends BaseController
 			res.status(500).json({ error: 'Internal Server Error' });
 		}
 	};
-
 }
